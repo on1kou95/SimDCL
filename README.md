@@ -11,7 +11,7 @@ conda env create -f SimDCL.yml
 conda activate SimDCL
 ```
 ## Train
-download data from anonymous account
+Download data from anonymous account
 https://drive.google.com/drive/folders/1oXim4BxsQTq0U-fKZpX_LrL6J377WKZz?usp=share_link
 and unzip data.7z
 ```
