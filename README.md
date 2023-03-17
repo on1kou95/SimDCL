@@ -1,0 +1,20 @@
+# SimDCL
+This is the official implementation in PyTorch for A Simple Framework for Depth Estimation-based Contrastive Learning.
+
+<!-- 
+The code is changed from https://github.com/kekmodel/FixMatch-pytorch -->
+
+## Build with conda
+
+```
+conda env create -f SimDCL.yml
+conda activate SimDCL
+```
+## Train
+
+```
+# to train the model by SimDCL:
+python3 train.py --cfg ./configs/config_SimDCL.py --out result   --seed 5 --gpu-id 0
+
+# to train the model by CCSSL:
+python3 train.py --cfg ./configs/config_CCSSL.py --out result   --seed 5 --gpu-id 0
