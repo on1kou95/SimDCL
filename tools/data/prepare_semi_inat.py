@@ -20,8 +20,8 @@ def convert_labeled(folder_dir):
         if not os.path.isdir(folder_path):
             continue
         for jpg_name in os.listdir(folder_path):
-            # if not jpg_name.endswith(".jpg"):
-            if not jpg_name.endswith(".png"):
+            if not jpg_name.endswith(".jpg"):
+            # if not jpg_name.endswith(".png"):
                 continue
             jpg_path = os.path.join(folder_path, jpg_name)
             anno_list.append([jpg_path, int(folder_name)])
@@ -38,8 +38,8 @@ def convert_ulabeled(folder_dir):
 
     anno_list = []
     for jpg_name in tqdm(os.listdir(folder_dir)):
-        # if not jpg_name.endswith(".jpg"):
-        if not jpg_name.endswith(".png"):
+        if not jpg_name.endswith(".jpg"):
+        # if not jpg_name.endswith(".png"):
             continue
         jpg_path = os.path.join(folder_dir, jpg_name)
         anno_list.append(jpg_path)

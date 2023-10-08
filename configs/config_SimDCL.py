@@ -9,7 +9,7 @@ train = dict(eval_step=1024,
                           lambda_contrast=2, # lambda_c
                           contrast_with_softlabel=True,
                           contrast_left_out=True,
-                          contrast_with_thresh=0.8, # T
+                          contrast_with_thresh=0.75, # T
                           loss_x=dict(
                               type="cross_entropy",
                               reduction="mean"),
