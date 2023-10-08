@@ -1,5 +1,5 @@
 # SimDCL
-This is the official implementation in PyTorch for A Simple Framework for Depth Estimation-based Contrastive Learning.
+This is the official implementation in PyTorch for A Simple Framework for Depth-augmented Contrastive Learning.
 
 <!-- 
 The code is changed from https://github.com/kekmodel/FixMatch-pytorch -->
