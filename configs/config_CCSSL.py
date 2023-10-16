@@ -36,35 +36,35 @@ data = dict(
     # CIFAR10SSL, CIFAR100SSL
     type="TxtDatasetSSL",
     num_workers=5,
-    batch_size=8,
-    l_anno_file="./data/Residue_nodepth/l_train/anno.txt",
+    batch_size=2,
+    l_anno_file="./data/Residue/l_train/anno.txt",
     u_anno_file=
-    "./data/Residue_nodepth/u_train/u_train.txt",
-    v_anno_file="./data/Residue_nodepth/val/anno.txt",
-    mu=7,
+    "./data/Residue/u_train/u_train_nodepth.txt",
+    v_anno_file="./data/Residue/val/anno.txt",
+    mu=100,
 
     lpipelines=[[
         dict(type="RandomHorizontalFlip", p=0.5),
-        dict(type="RandomResizedCrop", size=224, scale=(0.2, 1.0)),
+        dict(type="RandomResizedCrop", size=112, scale=(0.2, 1.0)),
         dict(type="ToTensor"),
         dict(type="Normalize", mean=seminat_mean, std=seminat_std)
     ]],
     upipelinse=[[
         dict(type="RandomHorizontalFlip"),
-        dict(type="Resize", size=256),
-        dict(type="CenterCrop", size=224),
+        dict(type="Resize", size=128),
+        dict(type="CenterCrop", size=112),
         dict(type="ToTensor"),
         dict(type="Normalize", mean=seminat_mean, std=seminat_std)
     ],
                 [
                     dict(type="RandomHorizontalFlip"),
-                    dict(type="RandomResizedCrop", size=224, scale=(0.2, 1.0)),
+                    dict(type="RandomResizedCrop", size=112, scale=(0.2, 1.0)),
                     dict(type="RandAugmentMC", n=2, m=10),
                     dict(type="ToTensor"),
                     dict(type="Normalize", mean=seminat_mean, std=seminat_std)
                 ],
                 [
-                    dict(type="RandomResizedCrop", size=224, scale=(0.2, 1.0)),
+                    dict(type="RandomResizedCrop", size=112, scale=(0.2, 1.0)),
                     dict(type="RandomHorizontalFlip"),
                     dict(type="RandomApply",
                          transforms=[
@@ -79,8 +79,8 @@ data = dict(
                     dict(type="ToTensor")
                 ]],
     vpipeline=[
-        dict(type="Resize", size=256),
-        dict(type="CenterCrop", size=224),
+        dict(type="Resize", size=128),
+        dict(type="CenterCrop", size=112),
         dict(type="ToTensor"),
         dict(type="Normalize", mean=seminat_mean, std=seminat_std)
     ])
