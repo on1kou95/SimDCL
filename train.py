@@ -357,7 +357,7 @@ def get_args():
                         default='',
                         type=str,
                         help='path to latest checkpoint (default: none)')
-    parser.add_argument('--seed', default=None, type=int, help="random seed")
+    parser.add_argument('--seed', default=5, type=int, help="random seed")
     parser.add_argument('--use_BN',
                         default=False,
                         type=bool,
