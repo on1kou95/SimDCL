@@ -14,7 +14,7 @@ conda activate SimDCL
 
 ```
 # to train the model by SimDCL:
-python3 train.py --cfg ./configs/config_SimDCL.py --out result   --seed 5 --gpu-id 0
+python3 train.py --cfg ./configs/config_SimDCL.py
 
 # to train the model by CCSSL:
-python3 train.py --cfg ./configs/config_CCSSL.py --out result   --seed 5 --gpu-id 0
+python3 train.py --cfg ./configs/config_CCSSL.py
